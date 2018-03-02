@@ -10,6 +10,14 @@ element.innerHTML = 'New Code';
 
 var img = document.getElementById('madi');
 
+var marginLeft = 0;
+
+function moveRight()
+{
+    marginLeft = marginLeft + 10;
+    img.style.marginLeft = marginLeft + 'px';
+}
+
 img.onclink = function() {
-  img.style.marginLeft = '200px';  
+    var interval = setInterval(moveRight, 100);
 };
