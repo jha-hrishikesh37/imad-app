@@ -10,6 +10,6 @@ element.innerHTML = 'New Code';
 
 var img = document.getElementById('madi');
 
-img.onclink = function(){
+img.onclink = function() {
   img.style.marginleft = '100px';  
 };
