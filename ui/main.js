@@ -8,16 +8,8 @@ element.innerHTML = 'New Value';
 
 //Move the image
 
-var img = document.getElementById('madi');
-
-var marginLeft = 0;
-
-function moveRight()
+var img = document.getElementById('img');
+img.onclick = function()
 {
-    marginLeft = marginLeft + 10;
-    img.style.marginLeft = marginLeft + 'px';
-}
-
-img.onclink = function() {
-    var interval = setInterval(moveRight, 100);
+    img.style.marginLeft = '100px';
 };
