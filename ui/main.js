@@ -1,10 +1,10 @@
 console.log('Loaded!');
 
-//Change the text of the main body
+//Change the text of the maintext div
 
 var element = document.getElementById('maintext');
 
-element.innerHTML = 'New Code';
+element.innerHTML = 'New Value';
 
 //Move the image
 
