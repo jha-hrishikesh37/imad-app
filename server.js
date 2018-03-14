@@ -96,6 +96,17 @@ app.get('/counter', function(req, res){
    res.send(counter.toString());
 });
 
+var names = [];
+app.get('/submit-name', function(req, res) {
+   //Get the name from the request
+   //var name = req.params.name;        //This is done when /: is used
+   var name = req.query.name;           //This is done when /? is used
+   
+   names.push(name);
+   //JSON: JavaScript Object Notation. It is used to convert JS objects into strings.
+   res.send(JSON.stringify(names));
+});
+
 app.get('/:articlename', function (req, res) {
   var articlename = req.params.articlename;
   res.send(createTemplate(articles[articlename]));
@@ -112,17 +123,6 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-
-var names = [];
-app.get('/submit-name', function(req, res) {
-   //Get the name from the request
-   //var name = req.params.name;        //This is done when /: is used
-   var name = req.query.name;           //This is done when /? is used
-   
-   names.push(name);
-   //JSON: JavaScript Object Notation. It is used to convert JS objects into strings.
-   res.send(JSON.stringify(names));
 });
 
 
